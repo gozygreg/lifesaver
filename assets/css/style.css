@@ -14,6 +14,16 @@ body {
     width: 100vw;
 }
 
+#logo {
+    margin-bottom: 0%;
+}
+
+hr {
+    width: 13.5%;
+    margin-top: 0;
+    border: 2px solid white;
+}
+
 #container {
     justify-content: center;
     align-items: center;
@@ -27,6 +37,7 @@ body {
     background-color: white;
     border-radius: 20px;
     margin: auto;
+    margin-top: 12px;
     padding-top: 10px;
 }
 
@@ -52,7 +63,7 @@ body {
     padding: 20px;
 }
 
-#begin {
+#begin, #restart, #next-step {
     font-size: large;
     font-weight: bold;
     box-shadow: 0 6px 12px -2px rgba(#F27813, .15);
@@ -71,4 +82,59 @@ input[type=text], select {
     outline-color: #e90023;
     border-radius: 10px;
     box-sizing: border-box;
+}
+
+/* QUIZGAME.HTML PAGE STYLE */
+#quiz-header {
+    padding: 20px;
+    border-bottom: 3px solid white;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: row;  
+}
+
+#question-container {
+    background-color: white;
+    width: 70%;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#question-container hr {
+    width: 12%;
+    margin: 5px auto;
+    border-color: #e90023;
+}
+
+#question-header {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;  
+    padding-top: 15px; 
+}
+
+#question {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#question-options {
+    justify-content: space-around;
+}
+
+.option-button {
+    height: 100px;
+    width: 50%;
+    border: 4px solid #e90023;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#restart, #next-step {
+    color: white;
 }
