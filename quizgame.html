@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An out-of-hospital cardiac arrest quiz game">
+    <meta name="keywords" content="cardiac arrest, heart attack, CPR, life saver, emergency, ambulance, paramedic">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -25,14 +27,15 @@
             <hr>
             <div id="question"></div>
             <div id="question-options">
-                <button class="option-button" id="option-1" data-type="correct"></button>
+                <button class="option-button" id="correct" data-type="correct"></button>
                 <br>
-                <button class="option-button" id="option-2" data-type="wrong"></button>
+                <button class="option-button" id="wrong" data-type="wrong"></button>
             </div>
         </div>
 
         <div  id="question-footer">
-            <button id="restart" data-type="restart">Restart</button>
+            <button id="prev-step" data-type="prev-step">Back</button>
+            <button id="submit" data-type="submit">Submit</button>
             <button id="next-step" data-type="nextstep">Next Step</button>
         </div>
 

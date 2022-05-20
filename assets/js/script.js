@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("You clicked the correct option");
             } if (this.getAttribute("data-type") === "wrong") {
                 alert("You clicked the wrong option");
-            } if (this.getAttribute("data-type") === "restart") {
-                alert("Restarting!");
+            } if (this.getAttribute("data-type") === "submit") {
+                alert("submiting!");
             } else {
                 let nextStep = this.getAttribute("data-type");
                 alert(`You clicked ${nextStep}`);
@@ -24,3 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 })
+
+// create variable to access the elements via the DOM
+const submitBtn = document.getElementById("submit");
+const nextStepBtn = document.getElementById("next-step");
+const question = document.getElementById("question");
+const correctBtn = document.getElementById("correct");
+const wrongBtn = document.getElementById("wrong");
+
+
+
+function runQuiz() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function displayQuestion () {
+    
+}
