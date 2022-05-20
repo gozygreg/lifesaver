@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+    runQuiz();
 })
 
 // create variable to access the elements via the DOM
@@ -32,6 +33,7 @@ const prevStepBtn = document.getElementById("prev-step")
 const question = document.getElementById("question");
 const correctBtn = document.getElementById("correct");
 const wrongBtn = document.getElementById("wrong");
+const userScore = document.getElementById("user-score");
 
 // Create a viarable for current question. To access the right question by increamenting or decrementing this counter based on user's interactions with next and prev buttons
 let currentQuestion = 0;
@@ -92,13 +94,43 @@ let questions = [
     }
 ]
 
+// Add onclick events to the buttons which will call functions when a button is clicked
+correctBtn.addEventListener("click", correctAnswer);
+wrongBtn.addEventListener("click", wrongAnswer);
+nextStepBtn.addEventListener("click", nextStep);
+prevStepBtn.addEventListener("click", prevStep);
+submitBtn.addEventListener("click", submit);
 
 
-
-
+// Create function to runQuiz when the page loads
 function runQuiz() {
-
+    currentQuestion = 0;
+    question.innerHTML = questions[currentQuestion].question;
+    correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    correctBtn.onclick = () => {
+        let ano = 0;
+        if(questions[currentQuestion].answers[ano].answer) {
+            if(score < 7) {
+                score++
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 2) {
+            nextStepBtn();
+        }
+    }
+    wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    wrongBtn.onclick = () => {
+        let ano = 1;
+        if(questions[currentQuestion].answers[ano].answer) {
+            if (score < 7) {
+                score++
+            }
+        }
+    }
+    prevStepBtn.classList.add("hide")
 }
+runQuiz();
 
 function checkAnswer() {
 

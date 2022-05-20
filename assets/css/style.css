@@ -94,6 +94,15 @@ input[type=text], select {
     flex-direction: row;  
 }
 
+.score {
+    font-size: large;
+    font-weight: bold;
+}
+
+#user-score, #total-score {
+    color: #e90023;
+}
+
 #question-container {
     background-color: white;
     width: 70%;
