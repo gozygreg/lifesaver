@@ -12,11 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "correct") {
-                alert("You clicked the correct option");
+                nextStep();
             } if (this.getAttribute("data-type") === "wrong") {
-                alert("You clicked the wrong option");
+                alert("You clicked the wrong option, please try again.");
+                restart();
             } if (this.getAttribute("data-type") === "submit") {
                 alert("submiting!");
+            } if (this.getAttribute("data-type") === "restart") {
+                restart();
             } else {
                 let Step = this.getAttribute("data-type");
                 alert(`You clicked ${Step}`);
@@ -24,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     runQuiz();
+    
 })
 
 // create variable to access the elements via the DOM
@@ -95,14 +99,16 @@ let questions = [
 ]
 
 // Add onclick events to the buttons which will call functions when a button is clicked
-correctBtn.addEventListener("click", correctAnswer);
-wrongBtn.addEventListener("click", wrongAnswer);
-nextStepBtn.addEventListener("click", nextStep);
-prevStepBtn.addEventListener("click", prevStep);
-submitBtn.addEventListener("click", submit);
+// correctBtn.addEventListener("click", correctAnswer);
+// wrongBtn.addEventListener("click", wrongAnswer);
+// nextStepBtn.addEventListener("click", nextStep);
+// prevStepBtn.addEventListener("click", prevStep);
+// submitBtn.addEventListener("click", submit);
 
 
-// Create function to runQuiz when the page loads
+/** 
+ * Create function to runQuiz when the page loads. 
+ * */ 
 function runQuiz() {
     currentQuestion = 0;
     question.innerHTML = questions[currentQuestion].question;
@@ -115,27 +121,81 @@ function runQuiz() {
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
-            nextStepBtn();
+        if(currentQuestion < 6) {
+            nextStep();
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         let ano = 1;
         if(questions[currentQuestion].answers[ano].answer) {
-            if (score < 7) {
-                score++
+            if(score < 7) {
+                score++;
             }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion <6) {
+            nextStep();
         }
     }
     prevStepBtn.classList.add("hide")
 }
+
 runQuiz();
 
-function checkAnswer() {
 
+
+/**
+* Create a function to restart the quiz The goal of this game quiz is to ensure that player or users follow the sequential steps
+* needed to help save a person's life during cardiac arrest. Therefore, a wrong answer to a question will lead to retarting the quiz. 
+* The only time users fail the quiz is when they quit. Finishing the quiz is as good as getting all the answers right and learning on the way.
+*/
+
+function restart() {
+    currentQuestion = 0;
+    prevStepBtn.classList.remove("hide")
+    nextStepBtn.classList.remove("hide");
+    submitBtn.classList.remove("hide");
+    correctBtn.classList.remove("hide");
+    wrongBtn.classList.remove("hide");
+    score = 0;
+    userScore.innerHTML = score;
+    runQuiz();
 }
 
-function displayQuestion () {
-    
+// Create function that will take user to next question
+function nextStep() {
+    currentQuestion++;
+    if (currentQuestion >= 6) {
+        nextStepBtn.classList.add("hide");
+        prevStepBtn.classList.remove("hide");
+    }
+    question.innerHTML = questions[currentQuestion].question;
+    correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    correctBtn.onclick = () => {
+        let ano = 0;
+        if(questions[currentQuestion].answers[ano].answer) {
+            if(score < 7) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 6) {
+            nextStep();
+        }
+    }
+    wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    wrongBtn.onclick = () => {
+        let ano = 1;
+        if(questions[currentQuestion].answers[ano].answer) {
+            if(score < 7) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 6) {
+            nextStep();
+        }
+    }
+    prevStepBtn.classList.remove("hide");
 }
