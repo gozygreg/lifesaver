@@ -6,34 +6,35 @@ let myName = localStorage.getItem("name");
 /** This function loads all event listeners after the DOM content has loaded,
  * and calls the startGame function to load the questions from the API
  */
-document.addEventListener("DOMContentLoaded", function () {
-    // Add event listeners for option buttons
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "correct") {
-                nextStep();
-            } if (this.getAttribute("data-type") === "wrong") {
-                alert("You clicked the wrong option, please try again.");
-                restart();
-            } if (this.getAttribute("data-type") === "submit") {
-                alert("submiting!");
-            } if (this.getAttribute("data-type") === "restart") {
-                restart();
-            } else {
-                let Step = this.getAttribute("data-type");
-                alert(`You clicked ${Step}`);
-            }
-        })
-    }
-    runQuiz();
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Add event listeners for option buttons
+//     let buttons = document.getElementsByTagName("button");
+//     for (let button of buttons) {
+//         button.addEventListener("click", function() {
+//             if (this.getAttribute("data-type") === "correct") {
+//                 nextStep();
+//             } if (this.getAttribute("data-type") === "wrong") {
+//                 alert("You clicked the wrong option, please try again.");
+//                 restart();
+//             } if (this.getAttribute("data-type") === "submit") {
+//                 submit();
+//             } if (this.getAttribute("data-type") === "restart") {
+//                 restart();
+//             } else {
+//                 let Step = this.getAttribute("data-type");
+//                 alert(`You clicked ${Step}`);
+//             }
+//         })
+//     }
+//     runQuiz();
     
-})
+// })
 
 // create variable to access the elements via the DOM
 const submitBtn = document.getElementById("submit");
-const nextStepBtn = document.getElementById("next-step");
-const prevStepBtn = document.getElementById("prev-step")
+const restartBtn = document.getElementById("restart");
+const nextStepBtn = document.getElementById("nextstep");
+const prevStepBtn = document.getElementById("prevstep");
 const question = document.getElementById("question");
 const correctBtn = document.getElementById("correct");
 const wrongBtn = document.getElementById("wrong");
@@ -49,61 +50,41 @@ let score = 0;
 let questions = [
     {
         question: "What do you do before you approach a person who has collapse?",
-        answers: [
-            {option: "Shout for help!", answer: true},
-            {option: "Shake them gently", answer: false}
-        ]
+        answers: [{option: "Shout for help!", answer: true}, {option: "Shake them gently", answer: false}]
     },
     {
         question: "What do you do after you have shouted for help?",
-        answers: [
-            {option: "Shake them gently", answer: true},
-            {option: "Look and listen for signs of normal breathing", answer: false}
-        ]
+        answers: [{option: "Shake them gently", answer: true}, {option: "Look and listen for signs of normal breathing", answer: false}]
     },
     {
         question: "What do you do after you shake them gently and they done respond?",
-        answers: [
-            {option: "Look and listen for signs of normal breathing", answer: true},
-            {option: "", answer: false}
-        ]
+        answers: [{option: "Look and listen for signs of normal breathing", answer: true}, {option: "Fetch a defibrillator if you can", answer: false}]
     },
     {
         question: "What do you do after you have look and listened for signs of normal breathing and there is none?",
-        answers: [
-            {option: "Fetch a defibrilator if you can", answer: true},
-            {option: "Begin to cry and panic", answer: false}
-        ]
+        answers: [{option: "Fetch a defibrilator if you can", answer: true}, {option: "Begin to cry and panic", answer: false}]
     },
     {
         question: "What do you do after you have fetch the defibrillator?",
-        answers: [
-            {option: "Start chest compression immediately", answer: true},
-            {option: "Expose their chest and think of chest compression", answer: false}
-        ]
+        answers: [{option: "Start chest compression immediately", answer: true}, {option: "Expose their chest and think of chest compression", answer: false}]
     },
     {
         question: "What do you do after you have done some chest compression?",
-        answers: [
-            {option: "If you have a defibrillator, switch it on and follow the instructions", answer: true},
-            {option: "Throw the defibrillator away", answer: false}
-        ]
+        answers: [{option: "If you have a defibrillator, switch it on and follow the instructions", answer: true}, {option: "Throw the defibrillator away", answer: false}]
     },
     {
         question: "What do you do after you have followed the instruction given by the defibrillator?",
-        answers: [
-            {option: "Resume or continue CPR until a paramedic arrives and tell you what to do or the person show signs of life", answer: true},
-            {option: "Stop CPR as you are tired", answer: false}
-        ]
+        answers: [{option: "Resume or continue CPR until a paramedic arrives and tell you what to do or the person show signs of life", answer: true}, {option: "Stop CPR as you are tired", answer: false}]
     }
 ]
 
 // Add onclick events to the buttons which will call functions when a button is clicked
-// correctBtn.addEventListener("click", correctAnswer);
-// wrongBtn.addEventListener("click", wrongAnswer);
-// nextStepBtn.addEventListener("click", nextStep);
-// prevStepBtn.addEventListener("click", prevStep);
-// submitBtn.addEventListener("click", submit);
+correctBtn.addEventListener("click", correct);
+wrongBtn.addEventListener("click", wrong);
+nextStepBtn.addEventListener("click", nextstep);
+prevStepBtn.addEventListener("click", prevstep);
+submitBtn.addEventListener("click", submit);
+restartBtn.addEventListener("click", restart)
 
 
 /** 
@@ -198,4 +179,15 @@ function nextStep() {
         }
     }
     prevStepBtn.classList.remove("hide");
+}
+
+
+//Create submit function that congratulates users for completing the game quiz.
+function submit() {
+    prevStepBtn.classList.add("hide");
+    nextStepBtn.classList.add("hide");
+    submitBtn.classList.add("hide");
+    correctBtn.classList.add("hide");
+    wrongBtn.classList.add("hide");
+    question.innerHTML = "Congratulations, YOU SAVED HIS LIFE through your prompt actions"
 }

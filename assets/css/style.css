@@ -63,7 +63,7 @@ hr {
     padding: 20px;
 }
 
-#begin, #submit, #next-step, #prev-step, #restart{
+#begin, #submit, #nextstep, #prevstep, #restart{
     width: 110px;
     font-size: large;
     font-weight: bold;
@@ -145,6 +145,10 @@ input[type=text], select {
     cursor: pointer;
 }
 
-#submit, #next-step, #prev-step, #restart {
+#submit, #nextstep, #prevstep, #restart {
     color: white;
+}
+
+.hide {
+    display: none;
 }
