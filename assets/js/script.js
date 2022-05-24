@@ -80,7 +80,7 @@ let questions = [
 ]
 
 // Add onclick events to the buttons which will call functions when a button is clicked
-// correctBtn.addEventListener("click", correct);
+// correctBtn.addEventListener("click", finalStep);
 // wrongBtn.addEventListener("click", wrong);
 nextStepBtn.addEventListener("click", nextStep);
 prevStepBtn.addEventListener("click", prevstep);
@@ -148,6 +148,8 @@ function nextStep() {
         if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
                 score++;
+            } if (score == 7) {
+                alert("Yes! You just saved a life. Click the submit button to see your actions");
             }
         }
         userScore.innerHTML = score;
@@ -156,7 +158,7 @@ function nextStep() {
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
-    wrongBtn.onclick()
+    
     prevStepBtn.classList.remove("hide");
 }
 
@@ -170,3 +172,4 @@ function submit() {
     wrongBtn.classList.add("hide");
     questionBox.innerHTML = "Congratulations, YOU SAVED HIS LIFE through your prompt actions"
 }
+
