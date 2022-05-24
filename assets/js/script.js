@@ -108,7 +108,11 @@ function runQuiz() {
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
-    
+    wrongBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
+            } 
+        }  
     
     prevStepBtn.classList.add("hide");
 }
@@ -158,7 +162,11 @@ function nextStep() {
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
-    
+    wrongBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
+            } 
+        }  
     prevStepBtn.classList.remove("hide");
 }
 
