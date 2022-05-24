@@ -2,34 +2,6 @@
 let myName = localStorage.getItem("name");
     document.getElementById("hey").innerHTML = myName;
 
-
-/** This function loads all event listeners after the DOM content has loaded,
- * and calls the startGame function to load the questions from the API
- */
-// document.addEventListener("DOMContentLoaded", function () {
-    
-//     let buttons = document.getElementsByTagName("button");
-//     for (let button of buttons) {
-//         button.addEventListener("click", function() {
-//             if (this.getAttribute("data-type") === "correct") {
-//                 nextStep();
-//             } if (this.getAttribute("data-type") === "wrong") {
-//                 alert("You clicked the wrong option, please try again.");
-//                 restart();
-//             } if (this.getAttribute("data-type") === "submit") {
-//                 submit();
-//             } if (this.getAttribute("data-type") === "restart") {
-//                 restart();
-//             } else {
-//                 let Step = this.getAttribute("data-type");
-//                 alert(`You clicked ${Step}`);
-//             }
-//         })
-//     }
-//     runQuiz();
-    
-// })
-
 // create variable to access the elements via the DOM
 const submitBtn = document.getElementById("submit");
 const restartBtn = document.getElementById("restart");
@@ -80,10 +52,8 @@ let questions = [
 ]
 
 // Add onclick events to the buttons which will call functions when a button is clicked
-// correctBtn.addEventListener("click", finalStep);
-// wrongBtn.addEventListener("click", wrong);
 nextStepBtn.addEventListener("click", nextStep);
-prevStepBtn.addEventListener("click", prevstep);
+prevStepBtn.addEventListener("click", prevStep);
 submitBtn.addEventListener("click", submit);
 restartBtn.addEventListener("click", restart);
 wrongBtn.addEventListener("click", restart );
@@ -99,7 +69,8 @@ function runQuiz() {
     correctBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
-                score++;   
+                score++; 
+                submitBtn.classList.add("hide"); 
             } 
         }  
         userScore.innerHTML = score;
@@ -115,8 +86,9 @@ function runQuiz() {
         }  
     
     prevStepBtn.classList.add("hide");
+    submitBtn.classList.add("hide");
+    
 }
-
 runQuiz();
 
 
@@ -126,7 +98,6 @@ runQuiz();
 * needed to help save a person's life during cardiac arrest. Therefore, a wrong answer to a question will lead to retarting the quiz. 
 * The only time users fail the quiz is when they quit. Finishing the quiz is as good as getting all the answers right and learning on the way.
 */
-
 function restart() {
     currentQuestion = 0;
     prevStepBtn.classList.remove("hide")
@@ -145,6 +116,7 @@ function nextStep() {
     if (currentQuestion >= 6) {
         nextStepBtn.classList.add("hide");
         prevStepBtn.classList.remove("hide");
+        
     }
     questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
@@ -154,12 +126,15 @@ function nextStep() {
                 score++;
             } if (score == 7) {
                 alert("Yes! You just saved a life. Click the submit button to see your actions");
+                submitBtn.classList.remove("hide");
+                
             }
         }
         userScore.innerHTML = score;
         if(currentQuestion < 6) {
             nextStep();
         }
+   
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
@@ -170,6 +145,42 @@ function nextStep() {
     prevStepBtn.classList.remove("hide");
 }
 
+
+
+// Create navigation to take user to previous question
+function prevStep() {
+    currentQuestion--;
+    if (currentQuestion >= 0) {
+        nextStepBtn.classList.remove("hide");
+        prevStepBtn.classList.add("hide");
+        
+    }
+    questionBox.innerHTML = questions[currentQuestion].question;
+    correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    correctBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            if(score < 7) {
+                score++;
+            } if (score == 7) {
+                alert("Yes! You just saved a life. Click the submit button to see your actions");
+                submitBtn.classList.remove("hide");
+                
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 6) {
+            nextStep();
+        }
+   
+    }
+    wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    wrongBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
+            } 
+        }  
+    prevStepBtn.classList.remove("hide");
+}
 
 //Create submit function that congratulates users for completing the game quiz.
 function submit() {
