@@ -7,7 +7,7 @@ let myName = localStorage.getItem("name");
  * and calls the startGame function to load the questions from the API
  */
 // document.addEventListener("DOMContentLoaded", function () {
-//     // Add event listeners for option buttons
+    
 //     let buttons = document.getElementsByTagName("button");
 //     for (let button of buttons) {
 //         button.addEventListener("click", function() {
@@ -35,18 +35,19 @@ const submitBtn = document.getElementById("submit");
 const restartBtn = document.getElementById("restart");
 const nextStepBtn = document.getElementById("nextstep");
 const prevStepBtn = document.getElementById("prevstep");
-const question = document.getElementById("question");
+const questionBox = document.getElementById("question-box");
 const correctBtn = document.getElementById("correct");
 const wrongBtn = document.getElementById("wrong");
 const userScore = document.getElementById("user-score");
+const index = document.getElementById("question-number");
 
 // Create a viarable for current question. To access the right question by increamenting or decrementing this counter based on user's interactions with next and prev buttons
 let currentQuestion = 0;
 
 // Create a counter viarable for the score
-let score = 0;
+let score = 0; 
 
-// Create an array of questions with options to choose from
+// Create an array of questions with options to choose from.
 let questions = [
     {
         question: "What do you do before you approach a person who has collapse?",
@@ -79,12 +80,13 @@ let questions = [
 ]
 
 // Add onclick events to the buttons which will call functions when a button is clicked
-correctBtn.addEventListener("click", correct);
-wrongBtn.addEventListener("click", wrong);
-nextStepBtn.addEventListener("click", nextstep);
+// correctBtn.addEventListener("click", correct);
+// wrongBtn.addEventListener("click", wrong);
+nextStepBtn.addEventListener("click", nextStep);
 prevStepBtn.addEventListener("click", prevstep);
 submitBtn.addEventListener("click", submit);
-restartBtn.addEventListener("click", restart)
+restartBtn.addEventListener("click", restart);
+wrongBtn.addEventListener("click", restart );
 
 
 /** 
@@ -92,34 +94,23 @@ restartBtn.addEventListener("click", restart)
  * */ 
 function runQuiz() {
     currentQuestion = 0;
-    question.innerHTML = questions[currentQuestion].question;
+    questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
     correctBtn.onclick = () => {
-        let ano = 0;
-        if(questions[currentQuestion].answers[ano].answer) {
+        if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
-                score++
-            }
-        }
+                score++;   
+            } 
+        }  
         userScore.innerHTML = score;
         if(currentQuestion < 6) {
             nextStep();
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
-    wrongBtn.onclick = () => {
-        let ano = 1;
-        if(questions[currentQuestion].answers[ano].answer) {
-            if(score < 7) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion <6) {
-            nextStep();
-        }
-    }
-    prevStepBtn.classList.add("hide")
+    
+    
+    prevStepBtn.classList.add("hide");
 }
 
 runQuiz();
@@ -151,11 +142,10 @@ function nextStep() {
         nextStepBtn.classList.add("hide");
         prevStepBtn.classList.remove("hide");
     }
-    question.innerHTML = questions[currentQuestion].question;
+    questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
     correctBtn.onclick = () => {
-        let ano = 0;
-        if(questions[currentQuestion].answers[ano].answer) {
+        if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
                 score++;
             }
@@ -166,18 +156,7 @@ function nextStep() {
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
-    wrongBtn.onclick = () => {
-        let ano = 1;
-        if(questions[currentQuestion].answers[ano].answer) {
-            if(score < 7) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion < 6) {
-            nextStep();
-        }
-    }
+    wrongBtn.onclick()
     prevStepBtn.classList.remove("hide");
 }
 
@@ -189,5 +168,5 @@ function submit() {
     submitBtn.classList.add("hide");
     correctBtn.classList.add("hide");
     wrongBtn.classList.add("hide");
-    question.innerHTML = "Congratulations, YOU SAVED HIS LIFE through your prompt actions"
+    questionBox.innerHTML = "Congratulations, YOU SAVED HIS LIFE through your prompt actions"
 }
