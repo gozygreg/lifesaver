@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Oswald:wght@700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -10,12 +11,14 @@ body {
     background-color: #e90023;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
 }
 
 #logo {
     margin-bottom: 0%;
+    font-size: 900;
+    font-weight: bolder;
 }
 
 hr {
@@ -106,7 +109,7 @@ input[type=text], select {
 #question-container {
     background-color: white;
     width: 70%;
-    height: 400px;
+    height: 450px;
     margin: auto;
     margin-top: 20px;
     border-radius: 20px;
@@ -116,6 +119,10 @@ input[type=text], select {
     width: 12%;
     margin: 5px auto;
     border-color: #e90023;
+}
+
+.score {
+    padding-top: 10px;
 }
 
 #question-header {
@@ -159,13 +166,10 @@ input[type=text], select {
 
 .page-footer {
 border-top: 3px solid white;
+margin-top: 20px;
 padding: 30px;
 text-align: center;
 color: white;
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
 display: block;
 }
 
@@ -173,4 +177,90 @@ display: block;
     font-size: 2.5rem;
     color: white;
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 380px) {
+    * {
+        font-size: 70%;
+    }
+
+    body {
+        height: 20%;
+    }
+
+
+    hr {
+        width:30.5%;
+        border: 1px solid white;
+    }
+
+    #welcome {
+        width: 70%;
+        height: 30px;
+        background-color: white;
+        border-radius: 10px; 
+    }
+
+    #cardiac-arrest { 
+        height: 100px;
+    }
+
+    #start-game { 
+        height: 120px;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    #begin, #submit, #nextstep, #prevstep, #restart{
+        width: 55px;
+        font-size: smaller;
+        font-weight: bold;
+        box-shadow: 0 3px 6px -1px rgba(#F27813, .1);
+        background-color: #e90023;
+        border-radius: 12px;
+        padding: 3px;
+        margin: 10px;
+    }
+    
+    input[type=text], select {
+        width: 25%;
+        height: 10px;
+        padding: 0.50rem 0.7rem;
+        border: 0.5px solid #1700e9;
+        border-radius: 5px;
+    }
+
+    #quiz-header {
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+    
+    #question-container {
+        width: 90%;
+        height: 400px;
+    }
+    
+    #question-container hr {
+        width: 10%;
+        margin: 2.5px auto;
+    }
+    
+    
+    #question-box {
+        font-size: small;
+    }
+    
+    #question-options {
+        justify-content: space-around;
+    }
+    
+    .option-button {
+        height: 70px;
+        width: 70%;
+        font-size: small;
+    }
 }
