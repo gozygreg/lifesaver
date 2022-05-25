@@ -12,6 +12,7 @@ const correctBtn = document.getElementById("correct");
 const wrongBtn = document.getElementById("wrong");
 const userScore = document.getElementById("user-score");
 const index = document.getElementById("question-number");
+const modalBox = document.getElementById("modal-box");
 
 // Create a viarable for current question. To access the right question by increamenting or decrementing this counter based on user's interactions with next and prev buttons
 let currentQuestion = 0;
@@ -75,7 +76,7 @@ function runQuiz() {
         }  
         userScore.innerHTML = score;
         if(currentQuestion < 6) {
-            nextStep();
+            nextStep();           
         }
     }
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
@@ -87,6 +88,7 @@ function runQuiz() {
     
     prevStepBtn.classList.add("hide");
     submitBtn.classList.add("hide");
+    
     
 }
 runQuiz();
@@ -189,6 +191,6 @@ function submit() {
     submitBtn.classList.add("hide");
     correctBtn.classList.add("hide");
     wrongBtn.classList.add("hide");
-    questionBox.innerHTML = "Congratulations, YOU SAVED HIS LIFE through your prompt actions"
+    questionBox.innerHTML = '<iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
 }
 

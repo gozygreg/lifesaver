@@ -149,6 +149,28 @@ input[type=text], select {
     color: white;
 }
 
+#submit {
+    margin: 0;
+}
+
 .hide {
     display: none;
+}
+
+.page-footer {
+border-top: 3px solid white;
+padding: 30px;
+text-align: center;
+color: white;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+display: block;
+}
+
+.page-footer i {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
 }
