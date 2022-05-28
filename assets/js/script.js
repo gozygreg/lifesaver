@@ -48,7 +48,7 @@ let questions = [
     },
     {
         question: "What do you do after you have followed the instruction given by the defibrillator?",
-        answers: [{option: "Resume or continue CPR until a paramedic arrives and tell you what to do or the person show signs of life", answer: true}, {option: "Stop CPR as you are tired", answer: false}]
+        answers: [{option: "Continue CPR until a paramedic arrives and tell you what to do or the person show signs of life", answer: true}, {option: "Stop CPR as you are tired", answer: false}]
     }
 ]
 
