@@ -187,7 +187,7 @@ background-color: black;
 
 @media screen and (max-width: 380px) {
     * {
-        font-size: 70%;
+        font-size: 90%;
     }
 
     body {
@@ -208,7 +208,7 @@ background-color: black;
     }
 
     #cardiac-arrest { 
-        height: 100px;
+        height: 10px;
     }
 
     #start-game { 
@@ -264,5 +264,31 @@ background-color: black;
         height: 70px;
         width: 70%;
         font-size: small;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #cardiac-arrest {
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #welcome {
+        width: 95%;
+        height: 150px;
+    }
+
+    #cardiac-arrest {
+        height: 225px;
+        width: 60%;
+    }
+
+    .option-button {   
+        width: 90%;
+    }
+
+    input[type=text], select {
+        width: 50%;
     }
 }
