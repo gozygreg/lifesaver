@@ -50,7 +50,7 @@ let questions = [
         question: "What do you do after you have followed the instruction given by the defibrillator?",
         answers: [{option: "Continue CPR until a paramedic arrives and tell you what to do or the person show signs of life", answer: true}, {option: "Stop CPR as you are tired", answer: false}]
     }
-]
+];
 
 // Add onclick events to the buttons which will call functions when a button is clicked
 nextStepBtn.addEventListener("click", nextStep);
@@ -78,13 +78,13 @@ function runQuiz() {
         if(currentQuestion < 6) {
             nextStep();           
         }
-    }
+    };
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
-        }  
+        };  
     
     prevStepBtn.classList.add("hide");
     submitBtn.classList.add("hide");
@@ -102,7 +102,7 @@ runQuiz();
 */
 function restart() {
     currentQuestion = 0;
-    prevStepBtn.classList.remove("hide")
+    prevStepBtn.classList.remove("hide");
     nextStepBtn.classList.remove("hide");
     submitBtn.classList.remove("hide");
     correctBtn.classList.remove("hide");
@@ -137,13 +137,13 @@ function nextStep() {
             nextStep();
         }
    
-    }
+    };
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
-        }  
+        };  
     prevStepBtn.classList.remove("hide");
 }
 
@@ -174,13 +174,13 @@ function prevStep() {
             nextStep();
         }
    
-    }
+    };
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
-        }  
+        };  
     prevStepBtn.classList.remove("hide");
 }
 
@@ -191,7 +191,7 @@ function submit() {
     submitBtn.classList.add("hide");
     correctBtn.classList.add("hide");
     wrongBtn.classList.add("hide");
-    questionBox.innerHTML = '<iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
+    questionBox.innerHTML = '<iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
 }
 
 
