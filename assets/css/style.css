@@ -8,12 +8,13 @@
 body {
     font-family: lato, sans-serif;
     font-weight: 300;
-    background-color: #e90023;
+    background-color: #FF331F;
     align-items: center;
     justify-content: center;
     max-height: 100vh;
     width: 100vw;
     margin: 0;
+    color: #0D0106;
 }
 
 #logo {
@@ -22,10 +23,20 @@ body {
     font-weight: bolder;
 }
 
+.game-name {
+    margin: 0;
+}
+
+#username {
+    padding-bottom: 5px;
+    font-size: larger;
+}
+
 hr {
     width: 17.5%;
     margin-top: 0;
-    border: 2px solid white;
+    margin-bottom: 0;
+    border: 2px solid #fbfbff;
 }
 
 #container {
@@ -38,7 +49,7 @@ hr {
 #welcome {
     width: 70%;
     height: 100px;
-    background-color: white;
+    background-color: #fbfbff;
     border-radius: 20px;
     margin: auto;
     margin-top: 12px;
@@ -50,7 +61,7 @@ hr {
     height: 150px;
     margin: auto;
     margin-top: 30px;
-    background-color: white;
+    background-color: #fbfbff;
     border-style: solid;
     padding: 12px;
     text-align: justify;
@@ -60,11 +71,11 @@ hr {
     width: 70%;
     height: 400px;
     margin: auto;
-    margin-top: 30px;
-    background-color: white;
+    margin-top: 15px;
+    background-color: #fbfbff;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: 20px;
+    padding: 5px
 }
 
 #begin, #submit, #nextstep, #prevstep, #restart{
@@ -72,10 +83,10 @@ hr {
     font-size: large;
     font-weight: bold;
     box-shadow: 0 6px 12px -2px rgba(#F27813, .15);
-    background-color: #e90023;
+    background-color: #FF331F;
     border-radius: 25px;
     padding: 10px;
-    margin: 50px;
+    margin: 15px;
     cursor: pointer;
 }
 
@@ -91,8 +102,7 @@ input[type=text], select {
 
 /* QUIZGAME.HTML PAGE STYLE */
 #quiz-header {
-    padding: 20px;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #fbfbff;
     align-items: baseline;
     justify-content: space-around;
     flex-direction: row;  
@@ -104,13 +114,13 @@ input[type=text], select {
 }
 
 #user-score, #total-score {
-    color: #e90023;
+    color: #3626a7;
 }
 
 #question-container {
-    background-color: white;
+    background-color: #fbfbff;
     width: 70%;
-    height: 450px;
+    height: 400px;
     margin: auto;
     margin-top: 20px;
     border-radius: 20px;
@@ -119,7 +129,7 @@ input[type=text], select {
 #question-container hr {
     width: 12%;
     margin: 5px auto;
-    border-color: #e90023;
+    border-color: #FF331F;
 }
 
 .score {
@@ -146,7 +156,7 @@ input[type=text], select {
 .option-button {
     height: 100px;
     width: 50%;
-    border: 4px solid #e90023;
+    border: 4px solid #FF331F;
     margin-top: 20px;
     border-radius: 10px;
     font-size: large;
@@ -154,7 +164,7 @@ input[type=text], select {
 }
 
 #submit, #nextstep, #prevstep, #restart {
-    color: white;
+    color: #fbfbff;
 }
 
 #submit {
@@ -166,29 +176,33 @@ input[type=text], select {
 }
 
 .page-footer {
-    width: 100%;
-margin-top: 20px;
+width: 100%;
+margin: 0;
 padding: 30px;
 text-align: center;
-color: white;
+color: #fbfbff;
 display: block;
 background-color: black;
 }
 
 .page-footer i {
     font-size: 2.5rem;
-    color: white;
+    color: #fbfbff;
     text-align: center;
     padding: 0;
     margin: 0;
 }
 
 /* Media Queries */
+/* Make website responsive to screen sizes of 380px and below */
 
 @media screen and (max-width: 380px) {
     #welcome {
         font-size: x-small;
-        padding: 30px;
+    }
+
+    #username {
+        font-size: large;
     }
 
     #begin, #submit, #nextstep, #prevstep, #restart{
@@ -199,21 +213,12 @@ background-color: black;
     }
 }
 
-@media screen and (max-width: 920px) {
-    #cardiac-arrest {
-        height: 225px;
-    }
-
-    #welcome {
-        font-size: small;
-       
-    }
-}
-
+/* Make website responsive to screen sizes of 660px and below */
 @media screen and (max-width: 660px) {
     #welcome {
         width: 95%;
         height: 150px;
+        padding: 30px;
     }
 
     #cardiac-arrest {
@@ -227,5 +232,22 @@ background-color: black;
 
     input[type=text], select {
         width: 50%;
+    }
+
+    #start-game p {
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Make website responsive to screen sizes of 920px and below */
+@media screen and (max-width: 920px) {
+    #cardiac-arrest {
+        height: 225px;
+    }
+
+    #welcome {
+        font-size: small;     
     }
 }
