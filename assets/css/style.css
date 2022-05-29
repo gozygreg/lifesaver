@@ -1,3 +1,4 @@
+/* Importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Oswald:wght@700&display=swap');
 
@@ -15,7 +16,6 @@ body {
     width: 100vw;
     margin: 0;
     color: #0D0106;
-    /* display: block; */
     position: relative;
 }
 
@@ -73,6 +73,14 @@ hr {
     border-style: solid;
     padding: 12px;
     text-align: justify;
+}
+
+/* Add amination to point out key information on the page */
+#cardiac-arrest:hover {
+    transform: perspective(200px) translateZ(30px);
+    transition: transform 0.5s ease-in;
+    background-color: #657ed4;
+    color: #0d0106;
 }
 
 #start-game {
@@ -171,6 +179,11 @@ input[type=text], select {
     cursor: pointer;
 }
 
+.option-button:hover {
+    background-color: #657ed4;
+    border: 0;
+}
+
 #submit, #nextstep, #prevstep, #restart {
     color: #fbfbff;
 }
@@ -201,6 +214,10 @@ bottom: 0;
     text-align: center;
     padding: 0;
     margin: 0;
+}
+
+i:hover {
+    color: #657ed4;
 }
 
 /* Media Queries */
