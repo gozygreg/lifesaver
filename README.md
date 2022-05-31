@@ -1,6 +1,8 @@
  # LIFE SAVER
  ## About the Quiz
+
 <img width="189" alt="logo" src="https://user-images.githubusercontent.com/69070044/171126102-abf63b8f-eaf3-4964-878c-67e563cb7ea9.png">
+
 This Life Saver quiz that educates user on what to do when they witness someone collaspe and is unresponsive and not breathing. Without immediate treatment or medical attention, the person will die. If you see someone having a cardiac arrest, phone 999 immediately and start CPR.
 
 # Table of Contents
@@ -18,3 +20,19 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 ## Requirements
 - A mobile device or computer that has connection to the internet
+
+# Design
+
+## Colours
+- I have used [Colours.co](https://coolors.co/) to create a good contrast on the page as well as choosing appopriate colour palette.
+- The predominant colours used are red and white with blue being used as an assent colour when buttons and some elements are hovered upon.
+
+## Fonts
+- [Google Fonts](https://fonts.google.com/) was used to obtain text font that best fit the website. Oswald and Lato were employed for this purpose.
+
+## Icons
+- The two font used in the site was supplied from [Font Awesome library](https://fontawesome.com/). One font was for the logo and the second was for the footer.
+
+# Structure
+
+
