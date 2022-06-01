@@ -114,5 +114,23 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
  - The website has two javaScript files. Synthax errors detected on JSHint were fixed. 
 
+ ## Lighthouse Testing
+
+ <img width="1267" alt="Lighthouse" src="https://user-images.githubusercontent.com/69070044/171509255-90a909ae-87dd-4c54-93c1-5e1363c61521.png">
+
+ - The website score high on all indexes; performace, SEO, assesibility and best practices.
+
+ # Credit
+
+ I appreciate the following individuals and platform for their help and support with this project
+
+ - Martina Terlevic - Code Institute Mentor.
+ - Antonio Bello - Software developer, Spotify
+ - [W3 Schools](https://www.w3schools.com/) - Online resource
+ - [Coding ninjas](https://www.codingninjas.com/) - for quiz template ideas
+ - [Font Awesome library](https://fontawesome.com/) - for their lovely icons
+ - [Google Fonts](https://fonts.google.com/)
+ - [Colours.co](https://coolors.co/)
+ - [Balsamiq wireframe](https://balsamiq.com)
 
 
