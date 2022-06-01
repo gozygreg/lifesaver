@@ -37,13 +37,26 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 ## Welcome Screen
 <img width="961" alt="Quiz Homepage" src="https://user-images.githubusercontent.com/69070044/171398132-c23f578a-b2fd-4bab-8a23-2a7d5d221045.png">
+
 - The welcome screen display instuctions needed for the quiz as well as allow players to input a username and proceed with the quiz.
 
 ## Question screen
-<img width="935" alt="Quiz page with highlighted answer button" src="https://user-images.githubusercontent.com/69070044/171407194-1d9408bf-d88f-49da-b6fc-d33d8a19235d.png">Life
+<img width="935" alt="Quiz page with highlighted answer button" src="https://user-images.githubusercontent.com/69070044/171407194-1d9408bf-d88f-49da-b6fc-d33d8a19235d.png">
+
 - The question screen thank the user for choosing to play and displays a question with two options. An option turns to blue when hovered upon.
 - Clicking the correct option automatially sends the user to the next question
+
+<img width="974" alt="final answer with submit button" src="https://user-images.githubusercontent.com/69070044/171507071-349ddd0f-7df7-4ff9-88c3-2e9f79cd8a38.png">
+
 - An alert is displayed that the will restart if the wrong option is clicked. Thus all question must be answered correctly to finsh the game-quiz.
+
+<img width="916" alt="Highlighted wrong answer button" src="https://user-images.githubusercontent.com/69070044/171507050-ae4f1e89-2377-471b-899d-1d56f54fc1ac.png">
+
+
+## End of quiz video/ Summary of actions
+<img width="948" alt="Final page after submittion" src="https://user-images.githubusercontent.com/69070044/171504360-4d8e1cd5-9caf-4443-9f6f-c9a2512598dc.png">
+
+- On clicking the submit button after the last question, a video section is shown to describe the actions of user. This video is obtained from the [UK Resusitaion Council](https://www.resus.org.uk/watch)
 
 ## Footer Section
 ![Footer ](https://user-images.githubusercontent.com/69070044/171408493-d270f593-0f87-44b6-a313-68e4f520e5e3.png)
@@ -52,6 +65,7 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 # Wireframes
 
 <img width="465" alt="Wireframe1" src="https://user-images.githubusercontent.com/69070044/171409387-f54e614a-aaa6-4fd3-835e-993dae3653a4.png">
+
 <img width="240" alt="wireframe2" src="https://user-images.githubusercontent.com/69070044/171409413-b14234fc-597a-4d28-99b6-6172e71f9df4.png">
 
 - [Balsamiq wireframe](https://balsamiq.com) was used to plan and sketch the website layout.
@@ -77,6 +91,28 @@ This Life Saver quiz that educates user on what to do when they witness someone 
  - [Coolors](https://coolors.co/)
 
  # Testing
+
+ ## W3 HTML Validation
+
+<img width="506" alt="HTML validation for index page" src="https://user-images.githubusercontent.com/69070044/171505585-657112ed-56fc-4067-af18-0cf76db04360.png">
+
+<img width="468" alt="HTML Validation for Quiz page" src="https://user-images.githubusercontent.com/69070044/171505606-5c214ffa-dde5-4a27-a110-f77c3970c098.png">
+
+ - No errors were detected on HTML Validator when both the index page and gamequiz page were run on the validator site
+
+ ## W3 CSS Validation
+
+ <img width="655" alt="CSS Validator" src="https://user-images.githubusercontent.com/69070044/171505991-a20376e9-9696-4fdb-8fd6-d3ebdf93c51f.png">
+
+ - No error were detected on CSS Validator testing.
+
+ ## JSHINT
+
+<img width="927" alt="JSHint" src="https://user-images.githubusercontent.com/69070044/171506005-2659b618-f435-4baa-859d-61a502de32eb.png">
+
+<img width="967" alt="JSHint2" src="https://user-images.githubusercontent.com/69070044/171506016-2037dea8-57f7-4bd3-84e2-5e530ba97ca1.png">
+
+ - The website has two javaScript files. Synthax errors detected on JSHint were fixed. 
 
 
 
