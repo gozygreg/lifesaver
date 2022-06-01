@@ -6,6 +6,13 @@
 This Life Saver quiz that educates user on what to do when they witness someone collaspe and is unresponsive and not breathing. Without immediate treatment or medical attention, the person will die. If you see someone having a cardiac arrest, phone 999 immediately and start CPR.
 
 # Table of Contents
+- [Ux](#ux)
+- [Design](#design)
+- [Structure](#structure)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credit](#credit)
 
 
 # UX
@@ -40,6 +47,9 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 - The welcome screen display instuctions needed for the quiz as well as allow players to input a username and proceed with the quiz.
 
+## Header
+![Header of Quiz page](https://user-images.githubusercontent.com/69070044/171513451-06b278f7-0ab0-46eb-886b-b20f295c2ed1.png)
+
 ## Question screen
 <img width="935" alt="Quiz page with highlighted answer button" src="https://user-images.githubusercontent.com/69070044/171407194-1d9408bf-d88f-49da-b6fc-d33d8a19235d.png">
 
@@ -69,6 +79,8 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 <img width="240" alt="wireframe2" src="https://user-images.githubusercontent.com/69070044/171409413-b14234fc-597a-4d28-99b6-6172e71f9df4.png">
 
 - [Balsamiq wireframe](https://balsamiq.com) was used to plan and sketch the website layout.
+
+## [back to top](#ux)
 
 # Technologies Used
 
@@ -119,6 +131,8 @@ This Life Saver quiz that educates user on what to do when they witness someone 
  <img width="1267" alt="Lighthouse" src="https://user-images.githubusercontent.com/69070044/171509255-90a909ae-87dd-4c54-93c1-5e1363c61521.png">
 
  - The website score high on all indexes; performace, SEO, assesibility and best practices.
+
+ # Deployment
 
  # Credit
 
