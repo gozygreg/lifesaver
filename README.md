@@ -35,4 +35,7 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 # Structure
 
+## Welcome Screen
+
+
 
