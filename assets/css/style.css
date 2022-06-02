@@ -133,7 +133,7 @@ input[type=text], select {
 }
 
 #user-score, #total-score {
-    color: #3626a7;
+    color: #1700e9;
 }
 
 #question-container {
@@ -185,6 +185,7 @@ input[type=text], select {
 
 .option-button:hover {
     background-color: #657ed4;
+    color: aquamarine;
     border: 0;
 }
 
@@ -207,7 +208,7 @@ padding: 30px;
 text-align: center;
 color: #fbfbff;
 background-color: black;
-height: 100px;
+height: 120px;
 position: absolute;
 bottom: 0;
 border-top: 4px solid #657ed4;

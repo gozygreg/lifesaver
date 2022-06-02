@@ -1,9 +1,10 @@
  # LIFE SAVER
  ## About the Quiz
 
-<img width="189" alt="logo" src="https://user-images.githubusercontent.com/69070044/171126102-abf63b8f-eaf3-4964-878c-67e563cb7ea9.png">
+ <img width="994" alt="Screenshot 2022-06-02 at 23 21 32" src="https://user-images.githubusercontent.com/69070044/171748214-f0fa4b39-4ced-43ae-aba9-1ac6cb801a54.png">
 
-This Life Saver quiz that educates user on what to do when they witness someone collaspe and is unresponsive and not breathing. Without immediate treatment or medical attention, the person will die. If you see someone having a cardiac arrest, phone 999 immediately and start CPR.
+
+Life Saver is a quiz that educates user on what to do when they witness a cardiac arrest. A cardiac arrest is when a person's heart stops pumping blood around their body and they stop breathing. Without immediate treatment or medical attention, the person will die. If you see someone having a cardiac arrest, phone 999 immediately and start CPR.
 
 # Table of Contents
 - [Ux](#ux)
@@ -32,13 +33,15 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 ## Colours
 - I have used [Colours.co](https://coolors.co/) to create a good contrast on the page as well as choosing appopriate colour palette.
-- The predominant colours used are red and white with blue being used as an assent colour when buttons and some elements are hovered upon.
+- The predominant colours used are red (#FF331F) and white (#fbfbff) with blue (#657ed4) being used as an assent colour when buttons and some elements are hovered upon.
 
 ## Fonts
 - [Google Fonts](https://fonts.google.com/) was used to obtain text font that best fit the website. Oswald and Lato were employed for this purpose.
 
-## Icons
+## Icons and logo
 - The two font used in the site was supplied from [Font Awesome library](https://fontawesome.com/). One font was for the logo and the second was for the footer.
+
+<img width="189" alt="logo" src="https://user-images.githubusercontent.com/69070044/171126102-abf63b8f-eaf3-4964-878c-67e563cb7ea9.png">
 
 # Structure
 
@@ -80,7 +83,7 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
 - [Balsamiq wireframe](https://balsamiq.com) was used to plan and sketch the website layout.
 
-## [back to top](#ux)
+## [back to top](#about-the-quiz)
 
 # Technologies Used
 
@@ -134,6 +137,16 @@ This Life Saver quiz that educates user on what to do when they witness someone 
 
  # Deployment
 
+ - The website was deployed via github pages
+ ## Deployment steps
+ - 1. Code institute template was used to create this project.
+ - 2. A suitable name (Lifesaver) was chosen for this project.
+ - 3. After completing most of the work, I navigated to the repository setting in github
+ - 4. Then I clicked on the Github page section.
+ - 5. Afterward, I click on the source drop down menu and choose 'main'
+ - 6. Finally clicking on save generated the live link to the site (https://gozygreg.github.io/lifesaver/)
+
+
  # Credit
 
  I appreciate the following individuals and platform for their help and support with this project
@@ -146,5 +159,7 @@ This Life Saver quiz that educates user on what to do when they witness someone 
  - [Google Fonts](https://fonts.google.com/)
  - [Colours.co](https://coolors.co/)
  - [Balsamiq wireframe](https://balsamiq.com)
+
+ [Back to Table of Contents](#table-of-contents)
 
 
