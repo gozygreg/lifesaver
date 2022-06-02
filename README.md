@@ -85,6 +85,10 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 
 ## [back to top](#about-the-quiz)
 
+# PRESENT LIMITATIONS AND FUTURE IMPROVEMENT
+
+- Due to lack of time and concerns about not meeting submition deadline, some improvements are needed to scale the project further.
+
 # Technologies Used
 
 ## Languages

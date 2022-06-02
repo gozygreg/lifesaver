@@ -244,10 +244,15 @@ i:hover {
     padding: 5px;
     margin: 20px;
     }
+
+    #start-game {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:430px) {
     #nextstep {
+        margin: 10px;
         margin: 10px;
     }
 }
