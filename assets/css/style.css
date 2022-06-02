@@ -246,6 +246,12 @@ i:hover {
     }
 }
 
+@media screen and (max-width:430px) {
+    #nextstep {
+        margin: 10px;
+    }
+}
+
 /* Make website responsive to screen sizes of 660px and below */
 @media screen and (max-width: 660px) {
     #welcome {
