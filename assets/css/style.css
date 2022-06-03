@@ -247,6 +247,11 @@ i:hover {
 
     #start-game {
         width: 80%;
+        padding: 0;
+    }
+
+    #start-game h3 {
+        padding-top: 5px
     }
 }
 
