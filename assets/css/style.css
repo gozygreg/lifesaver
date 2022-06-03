@@ -227,7 +227,17 @@ i:hover {
 }
 
 /* Media Queries */
-/* Make website responsive to screen sizes of 380px and below */
+
+/* Make website responsive to screen sizes of 350px and below */
+
+#begin, #submit, #nextstep, #prevstep, #restart{
+    width: 80px;
+    font-size: large;
+    padding: 5px;
+    margin: 20px;
+    }
+    
+/* Make website responsive to screen sizes of 435px and below */
 
 @media screen and (max-width: 435px) {
     #welcome {
@@ -240,7 +250,7 @@ i:hover {
 
     #begin, #submit, #nextstep, #prevstep, #restart{
     width: 80px;
-    font-size: small;
+    font-size: large;
     padding: 5px;
     margin: 20px;
     }
