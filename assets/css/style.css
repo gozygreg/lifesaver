@@ -229,7 +229,7 @@ i:hover {
 /* Media Queries */
 /* Make website responsive to screen sizes of 380px and below */
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 435px) {
     #welcome {
         font-size: x-small;
     }
@@ -252,13 +252,6 @@ i:hover {
 
     #start-game h3 {
         padding-top: 5px
-    }
-}
-
-@media screen and (max-width:430px) {
-    #nextstep {
-        margin: 10px;
-        margin: 10px;
     }
 }
 

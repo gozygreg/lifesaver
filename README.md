@@ -87,7 +87,8 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 
 # PRESENT LIMITATIONS AND FUTURE IMPROVEMENT
 
-- Due to lack of time and concerns about not meeting submition deadline, some improvements are needed to scale the project further.
+- Due to lack of time and concerns about not meeting submition deadline, some improvements are needed to scale the project further. 
+- The idea for the project as of now is for users to go through each questions without using the nextstep or back button. For now these button should be used to review the questions and understand the steps needed to help someone who is having cardiac arrest.
 
 # Technologies Used
 
