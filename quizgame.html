@@ -33,7 +33,7 @@
             <div id="question-options">
                 <button class="option-button" id="correct" data-type="correct"></button>
                 <br>
-                <button class="option-button" id="wrong" data-type="wrong"></button>
+                <button class="option-button trigger" id="wrong" data-type="wrong"></button>
             </div>
         </div>
 
@@ -46,14 +46,22 @@
         <div>
             <button id="submit" data-type="submit">Submit</button>
         </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>You choose the wrong option. Sadly you are going to have to start all over again. Don't give up and try again!</h2>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <div><a href="https://www.resus.org.uk/watch" target="_blank" title="Link to resusitation council UK website"><i class="fa-solid fa-truck-medical"></i></a>
+                <br> Resusitation Council UK</div>
+        </footer>
     </div>
 
-    <footer class="page-footer">
-        <div><a href="https://www.resus.org.uk/watch" target="_blank" title="Link to resusitation council UK website"><i class="fa-solid fa-truck-medical"></i></a>
-            <br> Resusitation Council UK</div>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
+    <!--Script to create interactive effects on quizgame page-->
+    <script src="assets/js/gameCommands.js"></script>
 
     <!--font awesome script-->
     <script src="https://kit.fontawesome.com/7f6773795a.js" crossorigin="anonymous"></script>

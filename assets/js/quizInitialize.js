@@ -16,4 +16,3 @@ let userName = document.getElementById("username");
         let theUserName = document.getElementById("username").value;
         localStorage.setItem("name", theUserName);
     });
-    

@@ -12,7 +12,9 @@ const correctBtn = document.getElementById("correct");
 const wrongBtn = document.getElementById("wrong");
 const userScore = document.getElementById("user-score");
 const index = document.getElementById("question-number");
-const modalBox = document.getElementById("modal-box");
+const modalBox = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
 
 // Create a viarable for current question. To access the right question by increamenting or decrementing this counter based on user's interactions with next and prev buttons
 let currentQuestion = 0;
@@ -57,12 +59,13 @@ nextStepBtn.addEventListener("click", nextStep);
 prevStepBtn.addEventListener("click", prevStep);
 submitBtn.addEventListener("click", submit);
 restartBtn.addEventListener("click", restart);
-wrongBtn.addEventListener("click", restart );
+wrongBtn.addEventListener("click", modalBox);
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnclick);
 
 
-/** 
- * Create function to runQuiz when the page loads. 
- * */ 
+ //Create function to runQuiz when the page loads.  
 function runQuiz() {
     currentQuestion = 0;
     questionBox.innerHTML = questions[currentQuestion].question;
@@ -82,18 +85,12 @@ function runQuiz() {
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
-        };  
-    
+        };
     prevStepBtn.classList.add("hide");
-    submitBtn.classList.add("hide");
-    
-    
+    submitBtn.classList.add("hide");  
 }
 runQuiz();
-
-
 
 /**
 * Create a function to restart the quiz The goal of this game quiz is to ensure that player or users follow the sequential steps
@@ -118,7 +115,6 @@ function nextStep() {
     if (currentQuestion >= 6) {
         nextStepBtn.classList.add("hide");
         prevStepBtn.classList.remove("hide");
-        
     }
     questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
@@ -127,35 +123,31 @@ function nextStep() {
             if(score < 7) {
                 score++;
             } if (score == 7) {
-                alert("Yes! You just saved a life. Click the submit button to see your actions");
-                submitBtn.classList.remove("hide");
-                
+                submit();
+                submitBtn.classList.add("hide");
+                prevStepBtn.classList.add("hide");
+                restartBtn.classList.add("hide")             
             }
         }
         userScore.innerHTML = score;
         if(currentQuestion < 6) {
             nextStep();
-        }
-   
+        }   
     };
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
         };  
     prevStepBtn.classList.remove("hide");
 }
-
-
 
 // Create navigation to take user to previous question
 function prevStep() {
     currentQuestion--;
     if (currentQuestion >= 0) {
         nextStepBtn.classList.remove("hide");
-        prevStepBtn.classList.add("hide");
-        
+        prevStepBtn.classList.add("hide"); 
     }
     questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
@@ -164,35 +156,41 @@ function prevStep() {
             if(score < 7) {
                 score++;
             } if (score == 7) {
-                alert("Yes! You just saved a life. Click the submit button to see your actions");
-                submitBtn.classList.remove("hide");
-                
+                submitBtn.classList.remove("hide"); 
             }
         }
         userScore.innerHTML = score;
         if(currentQuestion < 6) {
             nextStep();
-        }
-   
+        }  
     };
     wrongBtn.innerHTML = questions[currentQuestion].answers[1].option;
     wrongBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            alert("You choose the wrong option. Sadly you are going to have to start all over again. Please try again, someone's life depend on it! Thank you");
             } 
         };  
     prevStepBtn.classList.remove("hide");
 }
 
-//Create submit function that congratulates users for completing the game quiz.
+// Create submit function that congratulates users for completing the game quiz.
 function submit() {
     prevStepBtn.classList.add("hide");
     nextStepBtn.classList.add("hide");
     submitBtn.classList.add("hide");
     correctBtn.classList.add("hide");
     wrongBtn.classList.add("hide");
-    questionBox.innerHTML = '<iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    questionBox.innerHTML = 'Congratulations, You got it all right. Watch video below to see your actions.<hr><iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
 }
 
 
+// Create modal fuction for instances when user click the wrong option. This should create a pop-up box to inform users that the game will restart as they have choosen a wrong option. 
+function toggleModal() {
+    modalBox.classList.toggle("show-modal");
+    restart();
+}
 
+function windowOnclick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
