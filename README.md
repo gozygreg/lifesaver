@@ -33,7 +33,7 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 
 ## Colours
 - I have used [Colours.co](https://coolors.co/) to create a good contrast on the page as well as choosing appopriate colour palette.
-- The predominant colours used are red (#FF331F) and white (#fbfbff) with blue (#657ed4) being used as an assent colour when buttons and some elements are hovered upon.
+- The predominant colours used are dark red (#6B0000) and white (#fbfbff). Blue (#00358b) and green (#006b35) were used as an assent colours when buttons and some elements are hovered upon.
 
 ## Fonts
 - [Google Fonts](https://fonts.google.com/) was used to obtain text font that best fit the website. Oswald and Lato were employed for this purpose.
