@@ -22,6 +22,7 @@ let currentQuestion = 0;
 // Create a counter viarable for the score
 let score = 0; 
 
+
 // Create an array of questions with options to choose from.
 let questions = [
     {
@@ -65,15 +66,17 @@ closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnclick);
 
 
+
  //Create function to runQuiz when the page loads.  
 function runQuiz() {
-    currentQuestion = 0;
+    currentQuestion = 0;  
     questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    xof7.innerHTML = "Question" + " " + (currentQuestion + 1) + " " + "of" + " " + questions.length;
     correctBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
-                score++; 
+                score++;
                 submitBtn.classList.add("hide"); 
             } 
         }  
@@ -88,7 +91,8 @@ function runQuiz() {
             } 
         };
     prevStepBtn.classList.add("hide");
-    submitBtn.classList.add("hide");  
+    submitBtn.classList.add("hide");
+    restartBtn.classList.add("hide");
 }
 runQuiz();
 
@@ -125,8 +129,7 @@ function nextStep() {
             } if (score == 7) {
                 submit();
                 submitBtn.classList.add("hide");
-                prevStepBtn.classList.add("hide");
-                restartBtn.classList.add("hide")             
+                prevStepBtn.classList.add("hide");            
             }
         }
         userScore.innerHTML = score;
@@ -140,6 +143,7 @@ function nextStep() {
             } 
         };  
     prevStepBtn.classList.remove("hide");
+    
 }
 
 // Create navigation to take user to previous question
@@ -174,6 +178,7 @@ function prevStep() {
 
 // Create submit function that congratulates users for completing the game quiz.
 function submit() {
+    restartBtn.classList.remove("hide");
     prevStepBtn.classList.add("hide");
     nextStepBtn.classList.add("hide");
     submitBtn.classList.add("hide");
@@ -181,6 +186,7 @@ function submit() {
     wrongBtn.classList.add("hide");
     questionBox.innerHTML = 'Congratulations, You got it all right. Watch video below to see your actions.<hr><iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
 }
+
 
 
 // Create modal fuction for instances when user click the wrong option. This should create a pop-up box to inform users that the game will restart as they have choosen a wrong option. 

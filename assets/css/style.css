@@ -109,6 +109,10 @@ hr {
     cursor: pointer;
 }
 
+#restart{
+    width: 120px!important;
+}
+
 input[type=text], select {
     width: 25%;
     padding: 0.4rem 0.8rem;
@@ -176,7 +180,7 @@ input[type=text], select {
 .option-button {
     height: 100px;
     width: 50%;
-    border: 4px solid #FF331F;
+    border: 2px solid #FF331F;
     margin-top: 20px;
     border-radius: 10px;
     font-size: large;
@@ -187,6 +191,13 @@ input[type=text], select {
     background-color: #657ed4;
     color: aquamarine;
     border: 0;
+}
+
+#xof7 {
+    color:#0D0106;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.3em;
 }
 
 #submit, #nextstep, #prevstep, #restart {
