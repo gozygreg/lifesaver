@@ -41,41 +41,47 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 ## Icons and logo
 - The two font used in the site was supplied from [Font Awesome library](https://fontawesome.com/). One font was for the logo and the second was for the footer.
 
-<img width="189" alt="logo" src="https://user-images.githubusercontent.com/69070044/171126102-abf63b8f-eaf3-4964-878c-67e563cb7ea9.png">
+<img width="234" alt="logo" src="https://user-images.githubusercontent.com/69070044/172404676-188c5337-cbd1-492d-a1bf-3caddec696a0.png">
 
 # Structure
 
 ## Welcome Screen
-<img width="961" alt="Quiz Homepage" src="https://user-images.githubusercontent.com/69070044/171398132-c23f578a-b2fd-4bab-8a23-2a7d5d221045.png">
+<img width="937" alt="welcome page and logo" src="https://user-images.githubusercontent.com/69070044/172403888-24355059-411f-46df-903e-52ac2b9f11ff.png">
+- The welcome screen display instuctions needed for the quiz as well as allow players to input a username and proceed with the quiz. Information about cardiac arrest is highlighted when hovered on.
+<img width="938" alt="welcome page and hover function" src="https://user-images.githubusercontent.com/69070044/172403673-6948d2b7-900f-4d56-a160-92681f9bbe82.png">
 
-- The welcome screen display instuctions needed for the quiz as well as allow players to input a username and proceed with the quiz.
 
-## Header
-![Header of Quiz page](https://user-images.githubusercontent.com/69070044/171513451-06b278f7-0ab0-46eb-886b-b20f295c2ed1.png)
+
+## Header and Scoreboard
+<img width="902" alt="header" src="https://user-images.githubusercontent.com/69070044/172405277-84ff666c-d59d-4036-968b-799270bcd752.png">
+- The scoreboard keeps track of users progress during the quiz. The total attainable score is 7 and a failed question will lead to restarting the game to reenforce learning
+<img width="925" alt="scoreboard" src="https://user-images.githubusercontent.com/69070044/172406946-e1312494-2577-475d-b3fd-959be48069cb.png">
 
 ## Question screen
-<img width="935" alt="Quiz page with highlighted answer button" src="https://user-images.githubusercontent.com/69070044/171407194-1d9408bf-d88f-49da-b6fc-d33d8a19235d.png">
+<img width="934" alt="Question page and logo" src="https://user-images.githubusercontent.com/69070044/172402579-e5663794-5a2b-482c-92d9-3f0a91296c0f.png">
 
-- The question screen thank the user for choosing to play and displays a question with two options. An option turns to blue when hovered upon.
+- The question screen thank the user for choosing to play and displays a question with two options. An option hovered upon remains white while the other is blurred.
 - Clicking the correct option automatially sends the user to the next question
-
-<img width="974" alt="final answer with submit button" src="https://user-images.githubusercontent.com/69070044/171507071-349ddd0f-7df7-4ff9-88c3-2e9f79cd8a38.png">
-
 - An alert is displayed that the will restart if the wrong option is clicked. Thus all question must be answered correctly to finsh the game-quiz.
 
-<img width="916" alt="Highlighted wrong answer button" src="https://user-images.githubusercontent.com/69070044/171507050-ae4f1e89-2377-471b-899d-1d56f54fc1ac.png">
+<img width="945" alt="Wrong answer alert box" src="https://user-images.githubusercontent.com/69070044/172403265-0b6f786c-b634-4dff-8602-d92309e74ce8.png">
 
 
 ## End of quiz video/ Summary of actions
-<img width="948" alt="Final page after submittion" src="https://user-images.githubusercontent.com/69070044/171504360-4d8e1cd5-9caf-4443-9f6f-c9a2512598dc.png">
+<img width="932" alt="congratulation section" src="https://user-images.githubusercontent.com/69070044/172406203-6231d85c-6ec1-4883-87ec-fd17531137ed.png">
 
 - On clicking the submit button after the last question, a video section is shown to describe the actions of user. This video is obtained from the [UK Resusitaion Council](https://www.resus.org.uk/watch)
+
+## Buttons
+<img width="886" alt="buttons" src="https://user-images.githubusercontent.com/69070044/172408394-9505ea9a-aa99-429a-b213-64db68016863.png">
 
 ## Footer Section
 ![Footer ](https://user-images.githubusercontent.com/69070044/171408493-d270f593-0f87-44b6-a313-68e4f520e5e3.png)
 - The footer section has an icon which was obtained from [Font Awesome library](https://fontawesome.com/) that links to [the UK Resusitation Council website](https://www.resus.org.uk/watch)
 
 # Wireframes
+
+_ The wireframe is a little different from the main quiz due to experimentation with colors. 
 
 <img width="465" alt="Wireframe1" src="https://user-images.githubusercontent.com/69070044/171409387-f54e614a-aaa6-4fd3-835e-993dae3653a4.png">
 
