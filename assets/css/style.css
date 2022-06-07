@@ -109,6 +109,7 @@ hr {
     box-shadow: 0 -5px 3px -3px #0d0106, 0 5px 3px -3px #0D0106;
 }
 
+/* Style navigation buttons */
 #begin, #submit, #nextstep, #prevstep, #restart{
     width: 110px;
     font-size: large;
@@ -205,6 +206,8 @@ input[type=text], select {
     cursor: pointer;
 }
 
+
+/* Code style options butons when hovered upon. Acknowledgement to codepen.io tutorial for these bit of codes idea */
 #question-options:hover .option-button {
     filter:blur(2.5px);
     opacity:.5;

@@ -33,7 +33,7 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 
 ## Colours
 - I have used [Colours.co](https://coolors.co/) to create a good contrast on the page as well as choosing appopriate colour palette.
-- The predominant colours used are dark red (#6B0000) and white (#fbfbff). Blue (#00358b) and green (#006b35) were used as an assent colours when buttons and some elements are hovered upon.
+- The predominant colours used are white (#fbfbff) for background for the entire website and dark red (#840B11) as backgroud for div containers. Blue (#385399) and green (#006b35) were used as an assent colours when buttons and some elements are hovered upon.
 
 ## Fonts
 - [Google Fonts](https://fonts.google.com/) was used to obtain text font that best fit the website. Oswald and Lato were employed for this purpose.
@@ -168,9 +168,11 @@ _ The wireframe is a little different from the main quiz due to experimentation 
  - [W3 Schools](https://www.w3schools.com/) - Online resource
  - [Coding ninjas](https://www.codingninjas.com/) - for quiz template ideas
  - [Font Awesome library](https://fontawesome.com/) - for their lovely icons
+ - [Pure CSS Hover Blur](https://codepen.io/russpate/pen/qRaepv) - for online tutorial and code to style my option button with hover
  - [Google Fonts](https://fonts.google.com/)
  - [Colours.co](https://coolors.co/)
  - [Balsamiq wireframe](https://balsamiq.com)
+ 
 
  [Back to Table of Contents](#table-of-contents)
 
