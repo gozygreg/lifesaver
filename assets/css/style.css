@@ -149,6 +149,11 @@ input[type=text], select {
     font-weight: bold;
 }
 
+.score hr {
+    border: 1px solid #fbfbff!important;
+    width: 70%;
+}
+
 #user-score, #total-score {
     color: #ffffff;
 }
@@ -212,14 +217,6 @@ input[type=text], select {
     filter:blur(0px);
     opacity:1;
     box-shadow:0 8px 20px 0px rgba(0,0,0,0.2);
-}
-
-
-#xof7 {
-    color:#0D0106;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.3em;
 }
 
 #submit, #nextstep, #prevstep, #restart {
@@ -376,6 +373,4 @@ i:hover {
     #welcome {
         font-size: small;     
     }
-
-
 }

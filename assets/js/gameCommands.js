@@ -22,7 +22,6 @@ let currentQuestion = 0;
 // Create a counter viarable for the score
 let score = 0; 
 
-
 // Create an array of questions with options to choose from.
 let questions = [
     {
@@ -34,7 +33,7 @@ let questions = [
         answers: [{option: "Shake them gently", answer: true}, {option: "Look and listen for signs of normal breathing", answer: false}]
     },
     {
-        question: "What do you do after you shake them gently and they done respond?",
+        question: "What do you do after you shake them gently and they don't respond?",
         answers: [{option: "Look and listen for signs of normal breathing", answer: true}, {option: "Fetch a defibrillator if you can", answer: false}]
     },
     {
@@ -65,14 +64,11 @@ trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnclick);
 
-
-
  //Create function to runQuiz when the page loads.  
 function runQuiz() {
     currentQuestion = 0;  
     questionBox.innerHTML = questions[currentQuestion].question;
     correctBtn.innerHTML = questions[currentQuestion].answers[0].option;
-    xof7.innerHTML = "Question" + " " + (currentQuestion + 1) + " " + "of" + " " + questions.length;
     correctBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
             if(score < 7) {
@@ -142,8 +138,7 @@ function nextStep() {
         if(questions[currentQuestion].answers[0].answer) {
             } 
         };  
-    prevStepBtn.classList.remove("hide");
-    
+    prevStepBtn.classList.remove("hide");    
 }
 
 // Create navigation to take user to previous question
@@ -184,10 +179,8 @@ function submit() {
     submitBtn.classList.add("hide");
     correctBtn.classList.add("hide");
     wrongBtn.classList.add("hide");
-    questionBox.innerHTML = 'Congratulations, You got it all right. Watch video below to see your actions.<hr><iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    questionBox.innerHTML = 'Congratulations, You answered all the questions correctly. Watch video below to see your actions.<hr><iframe src="https://player.vimeo.com/video/444871640?h=65a7682b77&color=e90023&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
 }
-
-
 
 // Create modal fuction for instances when user click the wrong option. This should create a pop-up box to inform users that the game will restart as they have choosen a wrong option. 
 function toggleModal() {
