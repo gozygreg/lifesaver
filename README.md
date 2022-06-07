@@ -1,7 +1,7 @@
  # LIFE SAVER
  ## About the Quiz
 
- <img width="994" alt="Screenshot 2022-06-02 at 23 21 32" src="https://user-images.githubusercontent.com/69070044/171748214-f0fa4b39-4ced-43ae-aba9-1ac6cb801a54.png">
+ <img width="1279" alt="responsive design" src="https://user-images.githubusercontent.com/69070044/172411483-bb6f8371-1946-41e5-bdc3-146dd0af6bd0.png">
 
 
 Life Saver is a quiz that educates user on what to do when they witness a cardiac arrest. A cardiac arrest is when a person's heart stops pumping blood around their body and they stop breathing. Without immediate treatment or medical attention, the person will die. If you see someone having a cardiac arrest, phone 999 immediately and start CPR.
@@ -47,6 +47,7 @@ Life Saver is a quiz that educates user on what to do when they witness a cardia
 
 ## Welcome Screen
 <img width="937" alt="welcome page and logo" src="https://user-images.githubusercontent.com/69070044/172403888-24355059-411f-46df-903e-52ac2b9f11ff.png">
+
 - The welcome screen display instuctions needed for the quiz as well as allow players to input a username and proceed with the quiz. Information about cardiac arrest is highlighted when hovered on.
 <img width="938" alt="welcome page and hover function" src="https://user-images.githubusercontent.com/69070044/172403673-6948d2b7-900f-4d56-a160-92681f9bbe82.png">
 
@@ -142,7 +143,7 @@ _ The wireframe is a little different from the main quiz due to experimentation 
 
  ## Lighthouse Testing
 
- <img width="1267" alt="Lighthouse" src="https://user-images.githubusercontent.com/69070044/171509255-90a909ae-87dd-4c54-93c1-5e1363c61521.png">
+ <img width="1257" alt="lighthouse" src="https://user-images.githubusercontent.com/69070044/172409694-81cdd2fd-88a9-435e-a3ad-2bb04bfb3852.png">
 
  - The website score high on all indexes; performace, SEO, assesibility and best practices.
 
